@@ -1,5 +1,8 @@
+# BANCO DE DADOS 
+![image](https://github.com/JesskaBasilio/banco-de-dados/assets/152433983/8c82204d-6496-42da-9ecc-eb4557346475)  
 
-# BANCO DE DADOS
+
+
 
 <p>Hoje possuimos uma gama enorme de tecnologias, vai da gente saber explorar
 cada uma delas, a ponto de resolver, de fato, o problema que nos é colocado à frente.</p>
