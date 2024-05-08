@@ -64,3 +64,26 @@ UPDATE usuarios SET endereco = 'Nova Rua, 123' WHERE email = 'joao@example.com';
 
 -- delete --
 DELETE FROM reservas WHERE status = 'cancelada';
+
+CREATE TABLE usuarios_nova(
+	id INT,
+	nome VARCHAR(255) NOT NULL /*Nome do usuario*/,
+	email VARCHAR(255) NOT NULL /*UNIQUE COMMENT 'Endereço de e-mail do usuário'*/,
+  data_nascimento DATE NOT NULL /*'Data de nascimento do usuário'*/,
+  endereco VARCHAR(100) NOT NULL /*'Endereço do Cliente'*/
+);
+
+--Migrando os dados --
+
+INSERT INTO usuarios_nova SELECT * FROM usuarios
+
+-- Excluindo tabela anterior --
+DROP table usuarios;
+
+-- Renomeando nova tabela --
+EXEC SP_RENAME 'usuarios_nova', 'usuarios' 
+GO /*Se colocar o GO na linha acima dá um erro ao executar o programa*/
+
+--Alterar tamanho da coluna endereço -- 
+ALTER TABLE usuarios ALTER COLUMN endereco VARCHAR(100);
+
