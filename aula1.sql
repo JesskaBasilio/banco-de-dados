@@ -87,3 +87,5 @@ GO /*Se colocar o GO na linha acima dá um erro ao executar o programa*/
 --Alterar tamanho da coluna endereço -- 
 ALTER TABLE usuarios ALTER COLUMN endereco VARCHAR(100);
 
+
+
