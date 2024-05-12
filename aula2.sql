@@ -80,9 +80,26 @@ SELECT COUNT(*) AS quantidadeVendas FROM venda
 SELECT * FROM usuarios WHERE nome = 'Maria Santos'
 SELECT * FROM usuarios WHERE nome = 'Maria Santos' AND id = 2
 
+--uso do inner join--
+
+SELECT * FROM usuarios
+INNER JOIN reservas ON usuarios.id = reservas.id_usuario
+INNER JOIN destinos ON reservas.id_destino = destinos.id
+
+--alterando e adicionando elementos à tabela--
+
+ALTER TABLE usuarios
+ADD rua VARCHAR(100),
+ADD numero VARCHAR(10),
+ADD cidade VARCHAR(20),
+ADD estado VARCHAR(20) /*esses comandos inseri um por um para funcionar, ou seja alter table usuarios + add ... um por um*/
 
 
+select * from usuarios
 
+--cadastrando novo usuário--
+
+INSERT INTO usuarios (nome, email, data_nascimento, endereco) VALUES ('sem reservas', 'dio@teste.com', '1992-05-05', 'rua 12 cidade estado')
 
 
 
