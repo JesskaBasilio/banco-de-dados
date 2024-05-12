@@ -101,6 +101,10 @@ select * from usuarios
 
 INSERT INTO usuarios (nome, email, data_nascimento, endereco) VALUES ('sem reservas', 'dio@teste.com', '1992-05-05', 'rua 12 cidade estado')
 
-
-
+--UPDATE--
+UPDATE usuarios
+SET rua = INDEX_COL(SUBSTRING(endereco, ',',1), ',',-1)
+    numero = SUBSTRING(SUBSTRING(endereco, ',',2), ',',-1)
+	cidade = SUBSTRING(SUBSTRING(endereco, ',',3), ',',-1)
+	estado = SUBSTRING(endereco, ',',-1)
 
