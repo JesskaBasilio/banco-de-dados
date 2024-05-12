@@ -7,6 +7,32 @@
 <p>Hoje possuimos uma gama enorme de tecnologias, vai da gente saber explorar
 cada uma delas, a ponto de resolver, de fato, o problema que nos é colocado à frente.</p>
 
+## Tipos de Banco de Dados
+
+<ul>
+  <li>Relacionais/SQL</li>
+  <li>Não Relacionais/NoSQL (Not Only SQL)</li>
+  <li>Orientado à Objetos</li>
+  <li>Hierárquicos</li>
+</ul>
+
+## SGBD
+
+<ul>
+  <li>PostgreSQL</li>
+  <li>MySQL</li>
+  <li>SQLite</li>
+  <li>MariaDB</li>
+  <li>MongoDB</li>
+</ul>
+
+<p>Funcionalidades básicas:</p>
+
+  <h1>C <span>reate<span></h1> 
+  <h1>R <span>ead<span></h1>
+  <h1>U <span>pdate<span></h1>
+  <h1>D <span>elete<span></h1>
+
 ## O que é Banco de Dados Relacional (SQL)?
 
 <p align-text="justify">
@@ -20,7 +46,20 @@ armazenar a entidade de clientes, pedidos dos clientes, de produtos, ao qual é 
 do Banco.  
 </p>
 
+<p>Características:</p>
+
+<ul>
+  <li>Relacionamento entre tabelas;</li>
+  <li>Linguagem de consulta estruturada;</li>
+  <li>Integridade referencial;</li>
+  <li>Normalização de dados;</li>
+  <li>Segurança;</li>
+  <li>Flexibilidade e Extensibilidade;</li>
+  <li>Suporte à transações ACID.</li>
+</ul>
+
 ## O que é Banco de Dados Não Relacional (NoSQL)?
 <p>
   Ele é um complemento que permite que a gente mantenha a estrutura de dados nao rígida, seja dados ou imagens, vídeos, fotos etc.
 </p>
+
