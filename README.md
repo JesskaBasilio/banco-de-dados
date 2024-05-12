@@ -58,6 +58,12 @@ do Banco.
   <li>Suporte à transações ACID.</li>
 </ul>
 
+  <h1>A <span>tomicidade<span></h1> 
+  <h1>C <span>onsistência<span></h1>
+  <h1>I <span>solamento<span></h1>
+  <h1>D <span>urabilidade<span></h1>
+
+
 ## O que é Banco de Dados Não Relacional (NoSQL)?
 <p>
   Ele é um complemento que permite que a gente mantenha a estrutura de dados nao rígida, seja dados ou imagens, vídeos, fotos etc.
