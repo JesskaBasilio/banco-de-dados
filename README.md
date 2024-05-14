@@ -64,6 +64,27 @@ do Banco.
   <h1>D <span>urabilidade<span></h1>
 
 
+## Sintaxe básica - nomenclatura
+
+<ul>
+  <li>Os nomes devem começar com uma letra ou com um caracter sublinhado (_);</li>
+  <li>*** Os nomes podem conter letras, números e caracteres de sublinhado(_);</li>
+  <li>Sensibilidade à maiúsculas e minúsculas;</li>
+</ul>
+
+## MER e DER
+
+<p>
+O Modelo de Entidade-Relacionamento (MER) é representado através de diagramas chamados de Diagramas de Entidade-Relacionamento(DER).
+</p>
+
+### Entidades
+
+<p>
+As entidades são nomeadas com substantivos concretos ou abstratos que representam de forma clara sua função dentro do domínio.
+</p>
+
+
 ## O que é Banco de Dados Não Relacional (NoSQL)?
 <p>
   Ele é um complemento que permite que a gente mantenha a estrutura de dados nao rígida, seja dados ou imagens, vídeos, fotos etc.
