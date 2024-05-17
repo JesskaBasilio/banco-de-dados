@@ -39,3 +39,8 @@ CREATE TABLE prescricao (
       dosagem varchar(20)
 )
 
+INSERT INTO medico (nome, especialidade, crm) VALUES('Marcos Aurelio', 'Otorrino', 'CRM-222333')
+INSERT INTO medico (nome, especialidade, crm) VALUES('Vinicius Abreu', 'Ortopedista', 'CRM-292333')
+INSERT INTO medico (nome, especialidade, crm) VALUES('Alessandra Cunha', 'Ginecologista', 'CRM-222733')
+INSERT INTO medico (nome, especialidade, crm) VALUES('Katia Assis', 'Endocrinologista', 'CRM-122333')
+INSERT INTO medico (nome, especialidade, crm) VALUES('Juliana Silva', 'Pediatra', 'CRM-229833')
