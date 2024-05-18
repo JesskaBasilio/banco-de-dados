@@ -87,7 +87,7 @@ GO /*Se colocar o GO na linha acima dá um erro ao executar o programa*/
 --Alterar tamanho da coluna endereço -- 
 ALTER TABLE usuarios ALTER COLUMN endereco VARCHAR(100);
 
---desfazendo ADD na tabela de usuarios--
+--deletando colunas na tabela de usuarios--
 ALTER TABLE usuarios DROP COLUMN rua
 ALTER TABLE usuarios DROP COLUMN numero
 ALTER TABLE usuarios DROP COLUMN cidade
