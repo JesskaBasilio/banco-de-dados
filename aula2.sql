@@ -89,12 +89,11 @@ INNER JOIN destinos ON reservas.id_destino = destinos.id
 --alterando e adicionando elementos à tabela--
 
 ALTER TABLE usuarios
-ADD rua VARCHAR(100),
-ADD numero VARCHAR(10),
-ADD cidade VARCHAR(20),
-ADD estado VARCHAR(20) /*esses comandos inseri um por um para funcionar, ou seja alter table usuarios + add ... um por um*/
-
-
+ /*esses comandos inseri um por um para funcionar, ou seja alter table usuarios + add ... um por um*/
+ADD rua VARCHAR(255),
+ADD numero VARCHAR(50),
+ADD cidade VARCHAR(255),
+ADD estado VARCHAR(50)
 select * from usuarios
 
 --cadastrando novo usuário--
@@ -103,8 +102,20 @@ INSERT INTO usuarios (nome, email, data_nascimento, endereco) VALUES ('sem reser
 
 --UPDATE--
 UPDATE usuarios
-SET rua = INDEX_COL(SUBSTRING(endereco, ',',1), ',',-1)
-    numero = SUBSTRING(SUBSTRING(endereco, ',',2), ',',-1)
-	cidade = SUBSTRING(SUBSTRING(endereco, ',',3), ',',-1)
-	estado = SUBSTRING(endereco, ',',-1)
+SET rua = SUBSTRING(SUBSTRING(endereco, ',',1), ',',-1),
+    numero = SUBSTRING(SUBSTRING(endereco, ',',2), ',',-1),
+	cidade = SUBSTRING(SUBSTRING(endereco, ',',3), ',',-1),
+	estado = SUBSTRING(endereco, ',',-1);
 
+
+-- Atualizar a tabela 'usuarios' com a separação do endereço-- 
+UPDATE usuarios
+SET rua = LTRIM(RTRIM(SUBSTRING(endereco, 1, CHARINDEX(',', endereco) - 1))),
+    numero = LTRIM(RTRIM(SUBSTRING(endereco, CHARINDEX(',', endereco) + 1, 
+                CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) - CHARINDEX(',', endereco) - 1))),
+    cidade = LTRIM(RTRIM(SUBSTRING(endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) + 1, 
+                CHARINDEX(',', endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) + 1) - CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) - 1))),
+    estado = LTRIM(RTRIM(SUBSTRING(endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) + 1) + 1, LEN(endereco) - CHARINDEX(',', endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) + 1))));
+
+-- Verificar os dados após a atualização
+SELECT id, nome, rua, numero, cidade, estado FROM usuarios;
