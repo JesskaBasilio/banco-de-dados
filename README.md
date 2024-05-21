@@ -87,7 +87,11 @@ As entidades são nomeadas com substantivos concretos ou abstratos que represent
 ## Alguns conceitos básicos
 ### Chaves Primárias (Primary Key / PK)
 <p>
-Chaves Primárias (em inglês, Primary Key - PK), sob o ponto de vista de um banco de dados relacional, referem-se aos conjuntos de um ou mais campos, cujos valores, considerando a combinação de valores em caso de mais de uma chave primária, nunca se repetem na mesma tabela e, dessa forma, podem ser usadas como um índice de referência para criar relacionamentos com as demais tabelas do banco de dados (daí vem o nome banco de dados relacional). Portanto, uma chave primária nunca pode ter valor nulo, nem repetição. fonte: Alessandro Trovato.
+Chaves Primárias (em inglês, Primary Key - PK), sob o ponto de vista de um banco de dados relacional, referem-se aos conjuntos de um ou mais campos, cujos valores, considerando a combinação de valores em caso de mais de uma chave primária, nunca se repetem na mesma tabela e, dessa forma, podem ser usadas como um índice de referência para criar relacionamentos com as demais tabelas do banco de dados (daí vem o nome banco de dados relacional). Portanto, uma chave primária nunca pode ter valor nulo, nem repetição. fonte: Wikipedia por Alessandro Trovato.
+
+<br> <br>
+
+
 </p>
 
 
@@ -97,8 +101,15 @@ Chaves Primárias (em inglês, Primary Key - PK), sob o ponto de vista de um ban
 </p>
 
 ## REFERÊNCIAS
-### Alessandro Trovato
+### <i>Alessandro Trovato</i>
 <p>
  Canal Youtube: https://www.youtube.com/user/aletrovato
+<br><br>
+
+-><b>SQL SERVER - BANCO DE DADOS - PASSO A PASSO</b>
+
+<br><br>
+[link](https://www.youtube.com/watch?v=OKqpZ6zbZwQ&list=PL7iAT8C5wumpQWB8AFW7CwK2nlzh8ZdP9)
+
 </p>
 
