@@ -106,10 +106,7 @@ Chaves Primárias (em inglês, Primary Key - PK), sob o ponto de vista de um ban
  Canal Youtube: https://www.youtube.com/user/aletrovato
 <br><br>
 
--><b>SQL SERVER - BANCO DE DADOS - PASSO A PASSO</b>
-
-<br><br>
-[link](https://www.youtube.com/watch?v=OKqpZ6zbZwQ&list=PL7iAT8C5wumpQWB8AFW7CwK2nlzh8ZdP9)
+[<b>SQL SERVER - BANCO DE DADOS - PASSO A PASSO</b>](https://www.youtube.com/watch?v=OKqpZ6zbZwQ&list=PL7iAT8C5wumpQWB8AFW7CwK2nlzh8ZdP9)
 
 </p>
 
