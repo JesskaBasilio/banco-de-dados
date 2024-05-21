@@ -68,7 +68,7 @@ do Banco.
 
 <ul>
   <li>Os nomes devem começar com uma letra ou com um caracter sublinhado (_);</li>
-  <li>*** Os nomes podem conter letras, números e caracteres de sublinhado(_);</li>
+  <li>Os nomes podem conter letras, números e caracteres de sublinhado(_);</li>
   <li>Sensibilidade à maiúsculas e minúsculas;</li>
 </ul>
 
@@ -84,9 +84,21 @@ O Modelo de Entidade-Relacionamento (MER) é representado através de diagramas 
 As entidades são nomeadas com substantivos concretos ou abstratos que representam de forma clara sua função dentro do domínio.
 </p>
 
+## Alguns conceitos básicos
+### Chaves Primárias (Primary Key / PK)
+<p>
+Chaves Primárias (em inglês, Primary Key - PK), sob o ponto de vista de um banco de dados relacional, referem-se aos conjuntos de um ou mais campos, cujos valores, considerando a combinação de valores em caso de mais de uma chave primária, nunca se repetem na mesma tabela e, dessa forma, podem ser usadas como um índice de referência para criar relacionamentos com as demais tabelas do banco de dados (daí vem o nome banco de dados relacional). Portanto, uma chave primária nunca pode ter valor nulo, nem repetição. fonte: Alessandro Trovato.
+</p>
+
 
 ## O que é Banco de Dados Não Relacional (NoSQL)?
 <p>
   Ele é um complemento que permite que a gente mantenha a estrutura de dados nao rígida, seja dados ou imagens, vídeos, fotos etc.
+</p>
+
+## REFERÊNCIAS
+### Alessandro Trovato
+<p>
+ Canal Youtube: https://www.youtube.com/user/aletrovato
 </p>
 
