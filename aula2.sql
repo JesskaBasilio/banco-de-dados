@@ -87,13 +87,12 @@ INNER JOIN reservas ON usuarios.id = reservas.id_usuario
 INNER JOIN destinos ON reservas.id_destino = destinos.id
 
 --alterando e adicionando elementos à tabela--
+ALTER TABLE usuarios  /*esses comandos inseri um por um para funcionar, ou seja alter table usuarios + add ... um por um*/
+ADD rua NVARCHAR(255),
+ADD numero NVARCHAR(50),
+ADD cidade NVARCHAR(255),
+ADD estado NVARCHAR(50);
 
-ALTER TABLE usuarios
- /*esses comandos inseri um por um para funcionar, ou seja alter table usuarios + add ... um por um*/
-ADD rua VARCHAR(255),
-ADD numero VARCHAR(50),
-ADD cidade VARCHAR(255),
-ADD estado VARCHAR(50)
 select * from usuarios
 
 --cadastrando novo usuário--
@@ -102,20 +101,10 @@ INSERT INTO usuarios (nome, email, data_nascimento, endereco) VALUES ('sem reser
 
 --UPDATE--
 UPDATE usuarios
-SET rua = SUBSTRING(SUBSTRING(endereco, ',',1), ',',-1),
-    numero = SUBSTRING(SUBSTRING(endereco, ',',2), ',',-1),
-	cidade = SUBSTRING(SUBSTRING(endereco, ',',3), ',',-1),
-	estado = SUBSTRING(endereco, ',',-1);
+SET rua = CHARINDEX(CHARINDEX(endereco, ',', 1), ',', -1),
+    numero = CHARINDEX(CHARINDEX(endereco,  ',',2), ',',-1),
+	cidade = CHARINDEX(CHARINDEX(endereco, ',',3), ',',-1),
+	estado = CHARINDEX(endereco, ',',-1);
 
+-- Atualizando as novas colunas com os valores divididos
 
--- Atualizar a tabela 'usuarios' com a separação do endereço-- 
-UPDATE usuarios
-SET rua = LTRIM(RTRIM(SUBSTRING(endereco, 1, CHARINDEX(',', endereco) - 1))),
-    numero = LTRIM(RTRIM(SUBSTRING(endereco, CHARINDEX(',', endereco) + 1, 
-                CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) - CHARINDEX(',', endereco) - 1))),
-    cidade = LTRIM(RTRIM(SUBSTRING(endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) + 1, 
-                CHARINDEX(',', endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) + 1) - CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) - 1))),
-    estado = LTRIM(RTRIM(SUBSTRING(endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) + 1) + 1, LEN(endereco) - CHARINDEX(',', endereco, CHARINDEX(',', endereco, CHARINDEX(',', endereco) + 1) + 1))));
-
--- Verificar os dados após a atualização
-SELECT id, nome, rua, numero, cidade, estado FROM usuarios;
