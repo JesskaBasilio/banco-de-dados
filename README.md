@@ -87,21 +87,28 @@ As entidades são nomeadas com substantivos concretos ou abstratos que represent
 ## Alguns conceitos básicos
 ### Chaves Primárias (Primary Key / PK)
 <p>
-Chaves Primárias (em inglês, Primary Key - PK), sob o ponto de vista de um banco de dados relacional, referem-se aos conjuntos de um ou mais campos, cujos valores, considerando a combinação de valores em caso de mais de uma chave primária, nunca se repetem na mesma tabela e, dessa forma, podem ser usadas como um índice de referência para criar relacionamentos com as demais tabelas do banco de dados (daí vem o nome banco de dados relacional). Portanto, uma chave primária nunca pode ter valor nulo, nem repetição. fonte: Wikipedia por Alessandro Trovato.
+Chaves Primárias (em inglês, Primary Key - PK), sob o ponto de vista de um banco de dados relacional, referem-se aos conjuntos de um ou mais campos, cujos valores, considerando a combinação de valores em caso de mais de uma chave primária, nunca se repetem na mesma tabela e, dessa forma, podem ser usadas como um índice de referência para criar relacionamentos com as demais tabelas do banco de dados (daí vem o nome banco de dados relacional). Portanto, uma chave primária nunca pode ter valor nulo, nem repetição.<br><br> fonte: Wikipedia por Alessandro Trovato.
 
 
 ### Chaves Estrangeiras (Foreing Key / FK)
 <p>
 No contexto dos banco de dados, o conceito de chave estrangeira ou chave externa se refere ao tipo de relacionamento entre distintas tabelas de dados. <br> Uma chave estrangeira é chamada quando há o relacionamento entre duas tabelas. <br> Sempre em chave estrangeira vai haver relacionamentos entre tabelas, por exemplo, se uma tabela que tem uma chave primária de outra tabela.
-<br>
- fonte: Wikipedia por Alessandro Trovato.
+<br><br> fonte: Wikipedia por Alessandro Trovato.
 
 <br> <br>
 
-
-
 </p>
+## Tipos de Dados do SQL
 
+<P>
+
+</P>
+
+## Comandos do SQL - Banco de Dados Relacional
+
+<li>CREATE TABLE nome da tabela <br> Exemplo:<br> CREATE TABLE Alunos</li>
+
+<li>DROP TABLE nome da tabela <br> Exemplo:<br> DROP TABLE Alunos</li>
 
 ## O que é Banco de Dados Não Relacional (NoSQL)?
 <p>
