@@ -1,3 +1,5 @@
+Use SQL_DB_1
+
 CREATE TABLE Alunos 
 (
 	id_aluno INT PRIMARY KEY NOT NULL,
@@ -60,4 +62,25 @@ DROP TABLE Turmas;
 -- TURMAS X ALUNOS --
 
 ALTER TABLE Turmas 
-ADD CONSTRAINT fk_turmasAlunos FOREIGN KEY (id_aluno) REFERENCES Alunos (id_aluno);
+	ADD CONSTRAINT fk_TurmasAlunos FOREIGN KEY (id_aluno) REFERENCES Alunos (id_aluno);
+
+-- TURMAS X CURSOS --
+
+ALTER TABLE Turmas
+	ADD CONSTRAINT fk_TurmasCursos FOREIGN KEY (id_curso) REFERENCES Cursos (id_curso);
+
+
+-- Reg.Presença X Turmas --
+
+ALTER TABLE Registro_Presenca
+	ADD CONSTRAINT fk_RPTurmas FOREIGN KEY (id_turma) REFERENCES Turmas (id_turma);
+
+-- Reg.Presença X Alunos --
+
+ALTER TABLE Registro_Presenca
+	ADD CONSTRAINT fk_RPAlunos FOREIGN KEY (id_aluno) REFERENCES Alunos (id_aluno);
+
+-- Reg.Presença X Situacao --
+
+ALTER TABLE Registro_Presenca
+	ADD CONSTRAINT fk_RPSituacao FOREIGN KEY (id_situacao) REFERENCES Situacao (id_situacao);
