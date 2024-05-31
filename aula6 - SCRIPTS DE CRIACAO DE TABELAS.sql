@@ -56,3 +56,8 @@ DROP TABLE Registro_Presenca;
 DROP TABLE Situacao;
 DROP TABLE Turmas;
 */
+
+-- TURMAS X ALUNOS --
+
+ALTER TABLE Turmas 
+ADD CONSTRAINT fk_turmasAlunos FOREIGN KEY (id_aluno) REFERENCES Alunos (id_aluno);
